@@ -14,5 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: 'latest'
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
     - name: Build the Base Docker image
-      run: cd base && docker build . --file Dockerfile --tag davefinster/theia:go-$(date +%s) 
+      run: cd base && docker build . --file Dockerfile --tag davefinster/theia:base && docker push davefinster/theia:base
+    - name: Build the Golang Docker image
+      run: cd golang && docker build . --file Dockerfile --tag davefinster/theia:go && docker push davefinster/theia:go
