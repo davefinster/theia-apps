@@ -1,0 +1,78 @@
+{
+    "private": true,
+    "theia": {
+        "frontend": {
+            "config": {
+                "applicationName": "Theia Go Example",
+                "preferences": {
+                    "files.enableTrash": false,
+                    "workbench.iconTheme": "theia-file-icons",
+                    "go.autocompleteUnimportedPackages": true,
+                    "go.useLanguageServer": true,
+                    "workbench.colorTheme": "Solarized Dark"
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "@theia/editor-preview": "next",
+        "@theia/file-search": "next",
+        "@theia/getting-started": "next",
+        "@theia/git": "next",
+        "@theia/json": "next",
+        "@theia/markers": "next",
+        "@theia/messages": "next",
+        "@theia/navigator": "next",
+        "@theia/outline-view": "next",
+        "@theia/plugin-ext-vscode": "next",
+        "@theia/preferences": "next",
+        "@theia/preview": "next",
+        "@theia/search-in-workspace": "next",
+        "@theia/terminal": "next",
+        "@theia/vsx-registry": "next"
+    },
+    "devDependencies": {
+        "@theia/cli": "next",
+        "@theia/debug": "next"
+    },
+    "theiaPluginsDir": "plugins",
+    "theiaPlugins": {
+        "vscode-builtin-configuration-editing": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/configuration-editing-1.39.1-prel.vsix",
+        "vscode-builtin-debug-auto-launch": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/debug-auto-launch-1.39.1-prel.vsix",
+        "vscode-builtin-docker": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/docker-1.39.1-prel.vsix",
+        "vscode-builtin-go": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/go-1.39.1-prel.vsix",
+        "vscode-builtin-ini": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/ini-1.39.1-prel.vsix",
+        "vscode-builtin-json": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/json-1.39.1-prel.vsix",
+        "vscode-builtin-log": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/log-1.39.1-prel.vsix",
+        "vscode-builtin-make": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/make-1.39.1-prel.vsix",
+        "vscode-builtin-markdown": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/markdown-1.39.1-prel.vsix",
+        "vscode-builtin-merge-conflicts": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/merge-conflict-1.39.1-prel.vsix",
+        "vscode-builtin-shellscript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/shellscript-1.39.1-prel.vsix",
+        "vscode-builtin-sql": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/sql-1.39.1-prel.vsix",
+        "vscode-builtin-swift": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/swift-1.39.1-prel.vsix",
+        "vscode-builtin-theme-abyss": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-abyss-1.39.1-prel.vsix",
+        "vscode-builtin-theme-defaults": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-defaults-1.39.1-prel.vsix",
+        "vscode-builtin-theme-kimbie-dark": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-kimbie-dark-1.39.1-prel.vsix",
+        "vscode-builtin-theme-monokai": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-monokai-1.39.1-prel.vsix",
+        "vscode-builtin-theme-dimmed": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-monokai-dimmed-1.39.1-prel.vsix",
+        "vscode-builtin-theme-quietlight": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-quietlight-1.39.1-prel.vsix",
+        "vscode-builtin-theme-red": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-red-1.39.1-prel.vsix",
+        "vscode-builtin-theme-solarized-dark": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-solarized-dark-1.39.1-prel.vsix",
+        "vscode-builtin-theme-tomorrow-night-blue": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-tomorrow-night-blue-1.39.1-prel.vsix",
+        "vscode-builtin-typescript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-1.39.1-prel.vsix",
+        "vscode-builtin-typescript-language-features": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-language-features-1.39.1-prel.vsix",
+        "vscode-builtin-icon-theme-seti": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/vscode-theme-seti-1.39.1-prel.vsix",
+        "vscode-builtin-xml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/xml-1.39.1-prel.vsix",
+        "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
+        "vscode-editorconfig": "https://github.com/theia-ide/editorconfig-vscode/releases/download/v0.14.4/EditorConfig-0.14.4.vsix",
+        "vscode-go": "https://github.com/microsoft/vscode-go/releases/download/0.12.0/Go-0.12.0.vsix",
+        "vscode-one-dark-pro": "https://storage.googleapis.com/df-files/zhuangtongfa.Material-theme-3.4.0.vsix",
+        "vscode-proto3": "https://storage.googleapis.com/df-files/zxh404.vscode-proto3-0.4.2.vsix"
+    },
+    "resolutions": {
+        "vscode-json-languageserver": "1.2.2",
+        "vscode-languageserver-protocol": "3.15.0-next.9",
+        "vscode-languageserver-types": "3.15.0-next.5",
+        "**/vscode-json-languageserver/**/vscode-languageserver": "6.0.0-next.1"
+    }
+}
