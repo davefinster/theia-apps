@@ -3,7 +3,7 @@
     "theia": {
         "frontend": {
             "config": {
-                "applicationName": "Golang IDE",
+                "applicationName": "JavaScript/TypeScript IDE",
                 "preferences": {
                     "files.enableTrash": false
                 }
@@ -11,6 +11,8 @@
         }
     },
     "dependencies": {
+        "@theia/callhierarchy": "next",
+        "@theia/debug": "next",
         "@theia/editor-preview": "next",
         "@theia/file-search": "next",
         "@theia/getting-started": "next",
@@ -18,8 +20,11 @@
         "@theia/json": "next",
         "@theia/markers": "next",
         "@theia/messages": "next",
+        "@theia/mini-browser": "next",
         "@theia/navigator": "next",
         "@theia/outline-view": "next",
+        "@theia/plugin": "next",
+        "@theia/plugin-ext": "next",
         "@theia/plugin-ext-vscode": "next",
         "@theia/preferences": "next",
         "@theia/preview": "next",
@@ -28,24 +33,42 @@
         "@theia/vsx-registry": "next"
     },
     "devDependencies": {
-        "@theia/cli": "next",
-        "@theia/debug": "next"
+        "@theia/cli": "next"
+    },
+    "resolutions": {
+        "vscode-json-languageserver": "1.2.2",
+        "vscode-languageserver-protocol": "3.15.0-next.9",
+        "vscode-languageserver-types": "3.15.0-next.5",
+        "**/vscode-json-languageserver/**/vscode-languageserver": "6.0.0-next.1"
     },
     "theiaPluginsDir": "plugins",
     "theiaPlugins": {
         "vscode-builtin-configuration-editing": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/configuration-editing-1.39.1-prel.vsix",
+        "vscode-builtin-css": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/css-1.39.1-prel.vsix",
         "vscode-builtin-debug-auto-launch": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/debug-auto-launch-1.39.1-prel.vsix",
         "vscode-builtin-docker": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/docker-1.39.1-prel.vsix",
-        "vscode-builtin-go": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/go-1.39.1-prel.vsix",
+        "vscode-builtin-grunt": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/grunt-1.39.1-prel.vsix",
+        "vscode-builtin-gulp": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/gulp-1.39.1-prel.vsix",
+        "vscode-builtin-handlebars": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/handlebars-1.39.1-prel.vsix",
+        "vscode-builtin-hlsl": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/hlsl-1.39.1-prel.vsix",
+        "vscode-builtin-html": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/html-1.39.1-prel.vsix",
         "vscode-builtin-ini": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/ini-1.39.1-prel.vsix",
+        "vscode-builtin-javascript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/javascript-1.39.1-prel.vsix",
         "vscode-builtin-json": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/json-1.39.1-prel.vsix",
+        "vscode-builtin-less": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/less-1.39.1-prel.vsix",
         "vscode-builtin-log": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/log-1.39.1-prel.vsix",
         "vscode-builtin-make": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/make-1.39.1-prel.vsix",
         "vscode-builtin-markdown": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/markdown-1.39.1-prel.vsix",
         "vscode-builtin-merge-conflicts": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/merge-conflict-1.39.1-prel.vsix",
+        "vscode-builtin-npm": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/npm-1.39.1-prel.vsix",
+        "vscode-builtin-node-debug": "https://github.com/theia-ide/vscode-node-debug/releases/download/v1.35.3/node-debug-1.35.3.vsix",
+        "vscode-builtin-node-debug2": "https://github.com/theia-ide/vscode-node-debug2/releases/download/v1.33.0/node-debug2-1.33.0.vsix",
+        "vscode-builtin-pug": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/pug-1.39.1-prel.vsix",
+        "vscode-builtin-razor": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/razor-1.39.1-prel.vsix",
+        "vscode-builtin-scss": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/scss-1.39.1-prel.vsix",
+        "vscode-builtin-shaderlab": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/shaderlab-1.39.1-prel.vsix",
         "vscode-builtin-shellscript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/shellscript-1.39.1-prel.vsix",
         "vscode-builtin-sql": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/sql-1.39.1-prel.vsix",
-        "vscode-builtin-swift": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/swift-1.39.1-prel.vsix",
         "vscode-builtin-theme-abyss": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-abyss-1.39.1-prel.vsix",
         "vscode-builtin-theme-defaults": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-defaults-1.39.1-prel.vsix",
         "vscode-builtin-theme-kimbie-dark": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-kimbie-dark-1.39.1-prel.vsix",
@@ -57,18 +80,13 @@
         "vscode-builtin-theme-tomorrow-night-blue": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-tomorrow-night-blue-1.39.1-prel.vsix",
         "vscode-builtin-typescript": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-1.39.1-prel.vsix",
         "vscode-builtin-typescript-language-features": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/typescript-language-features-1.39.1-prel.vsix",
+        "vscode-builtin-vb": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/vb-1.39.1-prel.vsix",
         "vscode-builtin-icon-theme-seti": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/vscode-theme-seti-1.39.1-prel.vsix",
         "vscode-builtin-xml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/xml-1.39.1-prel.vsix",
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
         "vscode-editorconfig": "https://github.com/theia-ide/editorconfig-vscode/releases/download/v0.14.4/EditorConfig-0.14.4.vsix",
-        "vscode-go": "https://github.com/microsoft/vscode-go/releases/download/0.12.0/Go-0.12.0.vsix",
+        "vscode-eslint": "https://github.com/theia-ide/vscode-eslint/releases/download/release%2F2.0.15/vscode-eslint-2.0.15.vsix",
         "vscode-one-dark-pro": "https://storage.googleapis.com/df-files/zhuangtongfa.Material-theme-3.4.0.vsix",
         "vscode-proto3": "https://storage.googleapis.com/df-files/zxh404.vscode-proto3-0.4.2.vsix"
-    },
-    "resolutions": {
-        "vscode-json-languageserver": "1.2.2",
-        "vscode-languageserver-protocol": "3.15.0-next.9",
-        "vscode-languageserver-types": "3.15.0-next.5",
-        "**/vscode-json-languageserver/**/vscode-languageserver": "6.0.0-next.1"
     }
 }

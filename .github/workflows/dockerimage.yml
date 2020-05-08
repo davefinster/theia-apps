@@ -25,3 +25,5 @@ jobs:
       run: cd base && docker build . --file Dockerfile --tag davefinster/theia:base && docker tag davefinster/theia:base gcr.io/cluster-171711/theia-base:latest && docker push gcr.io/cluster-171711/theia-base:latest
     - name: Build the Golang Docker image
       run: cd golang && docker build . --file Dockerfile --tag davefinster/theia:go && docker tag davefinster/theia:go gcr.io/cluster-171711/theia-go:latest && docker push gcr.io/cluster-171711/theia-go:latest
+    - name: Build the JS/TS Docker image
+      run: cd golang && docker build . --file Dockerfile --tag davefinster/theia:js && docker tag davefinster/theia:js gcr.io/cluster-171711/theia-js:latest && docker push gcr.io/cluster-171711/theia-js:latest

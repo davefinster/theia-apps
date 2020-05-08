@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "files.eol": "\n",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": false,
+    "oneDarkPro.editorTheme": "Onedark Pro"
+}
