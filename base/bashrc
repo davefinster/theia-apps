@@ -1,0 +1,8 @@
+PROMPT_COMMAND='case $PWD in
+        $HOME) HPWD="~";;
+        $HOME/*/*) HPWD="${PWD#"${PWD%/*/*}/"}";;
+        $HOME/*) HPWD="~/${PWD##*/}";;
+        /*/*/*) HPWD="${PWD#"${PWD%/*/*}/"}";;
+        *) HPWD="$PWD";;
+      esac'
+PS1='$PROJECT_NAME: $HPWD > '

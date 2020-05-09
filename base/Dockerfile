@@ -11,7 +11,7 @@ RUN apt-get update && \
     unzip protoc-3.11.4-linux-x86_64.zip && \
     mv bin/protoc /usr/local/bin/protoc && \
 	mv include/* /usr/local/include && \
-    rm -rf protoc-3.6.0-linux-x86_64.zip bin include readme.txt && \
+    rm -rf protoc-3.11.4-linux-x86_64.zip bin include readme.txt && \
     echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg > /tmp/googlekey.key && \
     apt-key --keyring /usr/share/keyrings/cloud.google.gpg add /tmp/googlekey.key && \
@@ -27,3 +27,16 @@ RUN apt-get update && \
 	rm -rf docker-19.03.8.tgz && \
     apt-get autoremove -y && \
     apt-get clean
+
+ADD ./bashrc /home/theia/.bashrc
+
+# See : https://github.com/theia-ide/theia-apps/issues/34
+RUN adduser --disabled-password --gecos '' theia && \
+    chmod g+rw /home && \
+    mkdir -p /home/project/work && \
+    chown -R theia:theia /home/theia && \
+    chown -R theia:theia /home/project && \
+    mkdir -p /etc/sudoers.d && \
+    echo "theia ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopasswd 
+    
+USER theia

@@ -13,24 +13,10 @@ RUN yarn --pure-lockfile && \
     yarn autoclean --force && \
     yarn cache clean
 
-# See : https://github.com/theia-ide/theia-apps/issues/34
-RUN adduser --disabled-password --gecos '' theia && \
-    chmod g+rw /home && \
-    mkdir -p /home/project/work && \
-    mkdir -p /home/go && \
+RUN mkdir -p /home/go && \
     mkdir -p /home/go-tools && \
-    chown -R theia:theia /home/theia && \
-    chown -R theia:theia /home/project && \
     chown -R theia:theia /home/go && \
-    chown -R theia:theia /home/go-tools && \
-    mkdir -p /etc/sudoers.d && \
-    echo "theia ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopasswd && \
-    apt-get update && \
-    apt-get install -y sudo && \
-    apt-get autoremove -y && \
-    apt-get clean
-
-USER theia
+    chown -R theia:theia /home/go-tools
 
 ENV GO_VERSION=1.14 \
     GOOS=linux \
