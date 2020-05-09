@@ -13,10 +13,10 @@ RUN yarn --pure-lockfile && \
     yarn autoclean --force && \
     yarn cache clean
 
-RUN mkdir -p /home/go && \
-    mkdir -p /home/go-tools && \
-    chown -R theia:theia /home/go && \
-    chown -R theia:theia /home/go-tools
+RUN sudo mkdir -p /home/go && \
+    sudo mkdir -p /home/go-tools && \
+    sudo chown -R theia:theia /home/go && \
+    sudo chown -R theia:theia /home/go-tools
 
 ENV GO_VERSION=1.14 \
     GOOS=linux \
