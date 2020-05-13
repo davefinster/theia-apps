@@ -6,5 +6,6 @@
     "editor.detectIndentation": true,
     "editor.insertSpaces": false,
     "oneDarkPro.editorTheme": "Onedark Pro",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "javascript.referencesCodeLens.enabled": true
 }

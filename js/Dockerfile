@@ -15,6 +15,8 @@ RUN yarn --pure-lockfile && \
 
 ADD ./settings.json /home/theia/.theia/settings.json
 
+RUN sudo chown -R theia:theia /home/theia/.theia
+
 # configure Theia
 ENV SHELL=/bin/bash \
     THEIA_DEFAULT_PLUGINS=local-dir:/home/theia/plugins  \
