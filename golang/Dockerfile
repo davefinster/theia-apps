@@ -22,7 +22,8 @@ ENV GO_VERSION=1.14 \
     GOOS=linux \
     GOARCH=amd64 \
     GOROOT=/home/go \
-    GOPATH=/home/go-tools
+    GOPATH=/home/go-tools \
+    GO111MODULE=on
 ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # install Go and Theia default settings
 
@@ -53,13 +54,14 @@ RUN go get -u github.com/stamblerre/gocode && \
     go get -u -v github.com/cweill/gotests/... && \
     go get -u -v github.com/alecthomas/gometalinter && \
     go get -u -v honnef.co/go/tools/... && \
-    GO111MODULE=on go get -u -v github.com/golangci/golangci-lint/cmd/golangci-lint && \
+    go get -u -v github.com/golang/protobuf/protoc-gen-go@v1.3 && \
+    go get -u -v github.com/golangci/golangci-lint/cmd/golangci-lint && \
     go get -u -v github.com/mgechev/revive && \
     go get -u -v github.com/sourcegraph/go-langserver && \
     go get -u -v github.com/go-delve/delve/cmd/dlv && \
     go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct && \
     go get -u -v github.com/godoctor/godoctor && \
-    GO111MODULE=on go get -u -v golang.org/x/tools/gopls@latest && \
+    go get -u -v golang.org/x/tools/gopls@latest && \
     sudo rm -rf $GOPATH/src && \
     sudo rm -rf $GOPATH/pkg
 
