@@ -5,7 +5,7 @@ WORKDIR /home/theia
 
 # Base level
 RUN apt-get update && \
-    apt-get install --fix-missing -y locales net-tools curl build-essential git sudo unzip && \
+    apt-get install --fix-missing -y locales net-tools curl build-essential git sudo unzip clang-format && \
     locale-gen en_US.UTF-8  && \
     curl -L -O https://github.com/protocolbuffers/protobuf/releases/download/v3.11.4/protoc-3.11.4-linux-x86_64.zip && \
     unzip protoc-3.11.4-linux-x86_64.zip && \
