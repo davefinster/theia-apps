@@ -32,11 +32,11 @@ ADD ./settings.json /home/theia/.theia/settings.json
 RUN curl -fsSL https://storage.googleapis.com/golang/go$GO_VERSION.$GOOS-$GOARCH.tar.gz | tar -C /home -xzv && \
     sudo chown -R theia:theia /home/theia/.theia
 
-# install VS Code Go tools: https://github.com/Microsoft/vscode-go/blob/058eccf17f1b0eebd607581591828531d768b98e/src/goInstallTools.ts#L19-L45
 RUN go get -u github.com/stamblerre/gocode && \
-	mv $GOPATH/bin/gocode $GOPATH/bin/gocode-gomod && \
-	go get -u -v github.com/mdempsky/gocode && \
-    go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs && \
+	cp $GOPATH/bin/gocode $GOPATH/bin/gocode-gomod && \
+    go get -u -v golang.org/x/tools/gopls@latest && \
+    go get -u -v github.com/golang/protobuf/protoc-gen-go@v1.3 && \
+    go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs@v2 && \
     go get -u -v github.com/ramya-rao-a/go-outline && \
     go get -u -v github.com/acroca/go-symbols && \
     go get -u -v golang.org/x/tools/cmd/guru && \
@@ -52,16 +52,13 @@ RUN go get -u github.com/stamblerre/gocode && \
     go get -u -v winterdrache.de/goformat/goformat && \
     go get -u -v golang.org/x/lint/golint && \
     go get -u -v github.com/cweill/gotests/... && \
-    go get -u -v github.com/alecthomas/gometalinter && \
     go get -u -v honnef.co/go/tools/... && \
-    go get -u -v github.com/golang/protobuf/protoc-gen-go@v1.3 && \
-    go get -u -v github.com/golangci/golangci-lint/cmd/golangci-lint && \
+    go get -v github.com/golangci/golangci-lint/cmd/golangci-lint@v1.27.0 && \
     go get -u -v github.com/mgechev/revive && \
     go get -u -v github.com/sourcegraph/go-langserver && \
-    go get -u -v github.com/go-delve/delve/cmd/dlv && \
+    go get -v github.com/go-delve/delve/cmd/dlv && \
     go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct && \
     go get -u -v github.com/godoctor/godoctor && \
-    go get -u -v golang.org/x/tools/gopls@latest && \
     sudo rm -rf $GOPATH/src && \
     sudo rm -rf $GOPATH/pkg
 
