@@ -18,7 +18,7 @@ RUN sudo mkdir -p /home/go && \
     sudo chown -R theia:theia /home/go && \
     sudo chown -R theia:theia /home/go-tools
 
-ENV GO_VERSION=1.14 \
+ENV GO_VERSION=1.14.5 \
     GOOS=linux \
     GOARCH=amd64 \
     GOROOT=/home/go \

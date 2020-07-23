@@ -8,7 +8,7 @@
                     "files.enableTrash": false
                 }
             }
-        }
+        } 
     },
     "dependencies": {
         "@theia/editor-preview": "next",
@@ -36,7 +36,6 @@
         "vscode-builtin-configuration-editing": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/configuration-editing-1.39.1-prel.vsix",
         "vscode-builtin-debug-auto-launch": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/debug-auto-launch-1.39.1-prel.vsix",
         "vscode-builtin-docker": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/docker-1.39.1-prel.vsix",
-        "vscode-builtin-go": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/go-1.39.1-prel.vsix",
         "vscode-builtin-ini": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/ini-1.39.1-prel.vsix",
         "vscode-builtin-json": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/json-1.39.1-prel.vsix",
         "vscode-builtin-log": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/log-1.39.1-prel.vsix",
@@ -61,7 +60,7 @@
         "vscode-builtin-xml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/xml-1.39.1-prel.vsix",
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
         "vscode-editorconfig": "https://github.com/theia-ide/editorconfig-vscode/releases/download/v0.14.4/EditorConfig-0.14.4.vsix",
-        "vscode-go": "https://storage.googleapis.com/df-files/ms-vscode.Go-0.14.3.vsix",
+        "vscode-golang": "https://storage.googleapis.com/df-files/golang.Go-0.15.2.vsix",
         "vscode-one-dark-pro": "https://storage.googleapis.com/df-files/zhuangtongfa.Material-theme-3.4.0.vsix",
         "vscode-proto3": "https://storage.googleapis.com/df-files/zxh404.vscode-proto3-0.4.2.vsix"
     },
