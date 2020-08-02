@@ -35,7 +35,7 @@ RUN curl -fsSL https://storage.googleapis.com/golang/go$GO_VERSION.$GOOS-$GOARCH
 RUN go get -u github.com/stamblerre/gocode && \
 	cp $GOPATH/bin/gocode $GOPATH/bin/gocode-gomod && \
     go get -u -v golang.org/x/tools/gopls@latest && \
-    go get -u -v github.com/golang/protobuf/protoc-gen-go@v1.3 && \
+    go install google.golang.org/protobuf/cmd/protoc-gen-go && \
     go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs@v2 && \
     go get -u -v github.com/ramya-rao-a/go-outline && \
     go get -u -v github.com/acroca/go-symbols && \
